@@ -23,7 +23,7 @@ def list_title(titles):
         list.append(title['title'])
     for i in range(len(list)):
         if(i==0):
-            print("These are my favourite movies:",end=" ")   
+            print("These are my all-time favourite movies:",end=" ")   
         if(i<len(list)-1):
             print(list[i]+',',end=" ")
         else:
@@ -50,7 +50,10 @@ def add_piz_top(pizza, top_tup):
     return pizza
 
 # Creating dictonary
+
 def main():
+    
+
     zack_dictionary={
         "full_name": "Zackary Clarke",
 
@@ -59,9 +62,9 @@ def main():
         "pizza_toppings": ["Onion","Pepperoni","Olives"],
 
         "movies":[
+            #create Nested Dictonaries
             {
                 "title": "Drive",
-
                 "genre": "Thriller"
             },
             {
@@ -69,28 +72,29 @@ def main():
                 "genre": "Crime/Drama"
             }
         ]
-    }    
+    }
 
-# Adding a new movie to the movie dictonary
+
+    # Adding a new movie to the movie dictonary
     new_movie={
-	"title": "Interstellar",
+	"title": "Flubber",
 
-    'genre': "Science Fiction"
+    'genre': "Comedy"
     }
     
     zack_dictionary['movies'].append(new_movie)
 
-# Creating Pizza topping tuple
-pizza_topping_tuple=("Crocodile","Emu","Kangaroo")
+    # Creating Pizza topping tuple
+    pizza_topping_tuple=("Crocodile","Emu","Kangaroo")
 
-# Functions to list dictionary
+    # Functions to list dictionary
     stud_name_id(zack_dictionary)
     list_genre(zack_dictionary)
     list_title(zack_dictionary['movies'])
     list_toppings(zack_dictionary)
+    
+    # Adding pizza toppings to data structure
+    zack_dictionary=add_piz_top(zack_dictionary,pizza_topping_tuple)
+    list_toppings(zack_dictionary)        
 
-# Adding pizza toppings to data structure
-zack_dictionary=add_piz_top(pizza_topping_tuple)
-list_toppings(zack_dictionary) 
-
-main() 
+main()  
