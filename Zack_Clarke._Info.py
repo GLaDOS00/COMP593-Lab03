@@ -87,14 +87,16 @@ def main():
     # Creating Pizza topping tuple
     pizza_topping_tuple=("Crocodile","Emu","Kangaroo")
 
-    # Functions to list dictionary
+    # Functions to call student ID and list of toppings
     stud_name_id(zack_dictionary)
-    list_genre(zack_dictionary)
-    list_title(zack_dictionary['movies'])
     list_toppings(zack_dictionary)
     
     # Adding pizza toppings to data structure
     zack_dictionary=add_piz_top(zack_dictionary,pizza_topping_tuple)
-    list_toppings(zack_dictionary)        
+    list_toppings(zack_dictionary,) 
+    
+    # Functions to list movie dictionary
+    list_genre(zack_dictionary)
+    list_title(zack_dictionary['movies'])       
 
 main()  
